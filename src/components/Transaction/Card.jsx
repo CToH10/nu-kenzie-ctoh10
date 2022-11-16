@@ -1,4 +1,4 @@
-export function Transaction({ description, kindOf, value }) {
+export function Transaction({ description, kindOf, transactionValue }) {
   return (
     <li>
       <section className="descKind">
@@ -6,7 +6,7 @@ export function Transaction({ description, kindOf, value }) {
         <p>{kindOf}</p>
       </section>
       <section className="valueDelete">
-        <p>{value}</p>
+        <p>R$ {transactionValue}</p>
         <button className="deleteTransaction"></button>
       </section>
     </li>

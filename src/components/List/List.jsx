@@ -1,6 +1,7 @@
 import { Button } from "../Button/Button";
+import { Transaction } from "../Transaction/Card";
 
-export function List({ lista }) {
+export function List({ list, action }) {
   return (
     <section>
       <section className="listNav">
@@ -13,7 +14,7 @@ export function List({ lista }) {
         </section>
       </section>
 
-      <ul>{/* {lista.map((elem) => )} */}</ul>
+      <ul>{list.map((elem) => Transaction(elem, action))}</ul>
     </section>
   );
 }
