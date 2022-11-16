@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0px 10px 1px var(--color-grey-3);
+  height: 10vh;
+}
+header button {
+  background-color: var(--color-grey-2);
+  border: 1px solid var(--color-grey-2);
+  color: var(--color-grey-3);
+  padding: 1vh 4vw;
+}
+header button:hover {
+  background-color: var(--color-grey-4);
+  border: 1px solid var(--color-grey-4);
+  color: var(--color-grey-1);
+}
+
+h1 {
+  font-weight: var(--font-weight-1);
+}
+h1 span {
+  color: var(--color-primary);
+}
+
+@media (min-width: 700px) {
+  header button {
+    padding: 1vh 1vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  font-weight: var(--font-weight-4);
+}
+form .descIpt, form .sum, form .kindOf {
+  display: flex;
+  flex-direction: column;
+}
+form .values {
+  display: flex;
+}
+form #totalSum {
+  background-image: url("../../assets/value.svg");
+  background-size: inherit;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */
