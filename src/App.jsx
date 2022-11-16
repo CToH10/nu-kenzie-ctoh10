@@ -19,6 +19,13 @@ function App() {
     setTransactionsList([...transactionsList, transaction]);
   }
 
+  function deleteTransaction(transaction) {
+    setTransactionsList(
+      transactionsList.filter((elem) => elem.id !== transaction)
+    );
+    console.log(transactionsList);
+  }
+
   return (
     <section className="App">
       {initialized ? (
@@ -35,7 +42,7 @@ function App() {
               )}
             </section>
 
-            <List list={transactionsList} action={setTransactionsList} />
+            <List list={transactionsList} action={deleteTransaction} />
           </MainPage>
         </>
       ) : (

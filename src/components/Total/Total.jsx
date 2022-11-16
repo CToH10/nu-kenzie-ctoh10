@@ -1,6 +1,5 @@
 export function Total({ balance }) {
   let treat = [...balance];
-  console.log(treat);
   let total = treat[0].transactionValue;
 
   if (treat[0].kindOfValue === "withdrawal") {
@@ -13,11 +12,14 @@ export function Total({ balance }) {
     deposits = treat.filter((operation) => operation.kindOfValue === "deposit");
 
     let depositValue = deposits.map((elem) => elem.transactionValue);
-    console.log(depositValue);
 
-    let sum = depositValue.reduce((previousBalance = 0, currentBalance) => {
-      return previousBalance + currentBalance;
-    });
+    let sum = 0;
+
+    if (depositValue.length !== 0) {
+      sum = depositValue.reduce((previousBalance = 0, currentBalance) => {
+        return previousBalance + currentBalance;
+      });
+    }
 
     let withdrawals = [];
 
@@ -31,11 +33,15 @@ export function Total({ balance }) {
 
     let withdrawalValue = withdrawals.map((elem) => elem.transactionValue);
 
-    let subtract = withdrawalValue.reduce(
-      (previousBalance = 0, currentBalance) => {
-        return previousBalance + currentBalance;
-      }
-    );
+    let subtract = 0;
+
+    if (withdrawalValue.length !== 0) {
+      subtract = withdrawalValue.reduce(
+        (previousBalance = 0, currentBalance) => {
+          return previousBalance + currentBalance;
+        }
+      );
+    }
     total = sum - subtract;
   }
 

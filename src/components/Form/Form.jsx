@@ -6,7 +6,13 @@ import "./style.css";
 export function Form({ action }) {
   function handleSubmit(some) {
     if (some !== undefined) {
-      action(some);
+      let transactionItem = some;
+      transactionItem = {
+        ...some,
+        id:
+          some.transactionValue + some.description.concat() + some.kindOfValue,
+      };
+      action(transactionItem);
     }
   }
 
@@ -14,6 +20,7 @@ export function Form({ action }) {
     description: "",
     transactionValue: 0,
     kindOfValue: "",
+    id: "",
   });
 
   function handleChange(event) {
@@ -24,7 +31,10 @@ export function Form({ action }) {
       value = Number(value);
     }
 
-    setInput({ ...input, [name]: value });
+    setInput({
+      ...input,
+      [name]: value,
+    });
   }
   return (
     <form
