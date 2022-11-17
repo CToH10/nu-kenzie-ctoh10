@@ -51,9 +51,6 @@ export function List({ list, action }) {
           <Button text="Saídas" action={() => handleBtns("withdrawal")} />
         </section>
       </section>
-      {/* <ul>
-        <h2>Você não possui lançamentos</h2>
-      </ul> */}
       {actualList.length === 0 && (
         <h2 className="noTransactions">Você não possui lançamentos</h2>
       )}
@@ -64,13 +61,21 @@ export function List({ list, action }) {
       )}
       {depTrue && (
         <ul>
-          {depositList.map((elem, index) => Transaction(elem, index, action))}
+          {depositList.length > 0 ? (
+            depositList.map((elem, index) => Transaction(elem, index, action))
+          ) : (
+            <h2 className="noTransactions">Você não possui lançamentos</h2>
+          )}
         </ul>
       )}
       {withTrue && (
         <ul>
-          {withdrawalList.map((elem, index) =>
-            Transaction(elem, index, action)
+          {withdrawalList.length > 0 ? (
+            withdrawalList.map((elem, index) =>
+              Transaction(elem, index, action)
+            )
+          ) : (
+            <h2 className="noTransactions">Você não possui lançamentos</h2>
           )}
         </ul>
       )}
