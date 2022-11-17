@@ -3,14 +3,17 @@ import { Button } from "../Button/Button";
 import { Inputs } from "../Input/Inputs";
 import "./style.css";
 
-export function Form({ action }) {
+export function Form({ action, list }) {
   function handleSubmit(some) {
     if (some !== undefined) {
       let transactionItem = some;
       transactionItem = {
         ...some,
         id:
-          some.transactionValue + some.description.concat() + some.kindOfValue,
+          String(list.length) +
+          some.transactionValue +
+          some.description.replaceAll(" ", "") +
+          some.kindOfValue,
       };
       action(transactionItem);
     }

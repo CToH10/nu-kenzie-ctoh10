@@ -33,7 +33,7 @@ function App() {
           <StaticHeader action={goToPage} />
           <MainPage>
             <section className="container">
-              <Form action={newTrans} />
+              <Form action={newTrans} list={transactionsList} />
             </section>
 
             <section className="container">

@@ -38,13 +38,21 @@ export function List({ list, action }) {
       </section>
 
       {!depTrue && !withTrue && (
-        <ul>{actualList.map((elem) => Transaction(elem, action))}</ul>
+        <ul>
+          {actualList.map((elem, index) => Transaction(elem, index, action))}
+        </ul>
       )}
       {depTrue && (
-        <ul>{depositList.map((elem) => Transaction(elem, action))}</ul>
+        <ul>
+          {depositList.map((elem, index) => Transaction(elem, index, action))}
+        </ul>
       )}
       {withTrue && (
-        <ul>{withdrawalList.map((elem) => Transaction(elem, action))}</ul>
+        <ul>
+          {withdrawalList.map((elem, index) =>
+            Transaction(elem, index, action)
+          )}
+        </ul>
       )}
     </section>
   );
