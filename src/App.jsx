@@ -5,6 +5,7 @@ import { Form } from "./components/Form/Form";
 import { StaticHeader } from "./components/Header/Header";
 import { List } from "./components/List/List";
 import { MainPage } from "./components/MainPage/MainPage";
+import { Total } from "./components/Total/Total";
 
 function App() {
   const [transactionsList, setTransactionsList] = useState([]);
@@ -12,7 +13,17 @@ function App() {
 
   function goToPage() {
     setInitialized(!initialized);
-    console.log(initialized);
+  }
+
+  function newTrans(transaction) {
+    setTransactionsList([...transactionsList, transaction]);
+  }
+
+  function deleteTransaction(transaction) {
+    setTransactionsList(
+      transactionsList.filter((elem) => elem.id !== transaction)
+    );
+    console.log(transactionsList);
   }
 
   return (
@@ -21,11 +32,17 @@ function App() {
         <>
           <StaticHeader action={goToPage} />
           <MainPage>
-            <section className="newValues">
-              <Form />
+            <section className="container">
+              <Form action={newTrans} list={transactionsList} />
             </section>
 
-            <List />
+            <section className="container">
+              {transactionsList.length !== 0 && (
+                <Total balance={[...transactionsList]} />
+              )}
+            </section>
+
+            <List list={transactionsList} action={deleteTransaction} />
           </MainPage>
         </>
       ) : (
