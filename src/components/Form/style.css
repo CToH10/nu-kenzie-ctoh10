@@ -51,6 +51,14 @@ form button {
   form {
     border: 1px solid var(--color-grey-4);
   }
+  html[light] form {
+    border: 1px solid var(--color-grey-2);
+  }
+}
+@media (prefers-color-scheme: light) {
+  html[dark] form {
+    border: 1px solid var(--color-grey-4);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

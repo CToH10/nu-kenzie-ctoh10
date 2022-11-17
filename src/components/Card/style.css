@@ -64,6 +64,34 @@
   .withdrawal {
     border-left: 9px solid var(--color-grey-50);
   }
+  html[light] .transCard {
+    background-color: var(--color-grey-1);
+  }
+  html[light] .transCard button:hover {
+    background-image: url("../../assets/Property 1=Hover.svg");
+  }
+  html[light] .transCard:hover {
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 5px 3px var(--color-grey-2);
+  }
+  html[light] .withdrawal {
+    border-left: 9px solid var(--color-grey-2);
+  }
+}
+@media (prefers-color-scheme: light) {
+  html[dark] .transCard {
+    background-color: var(--color-grey-3);
+  }
+  html[dark] .transCard button:hover {
+    background-image: url("../../assets/Property 1=DarkHover.svg");
+  }
+  html[dark] .transCard:hover {
+    background-color: var(--color-grey-2);
+    box-shadow: 0px 0px 5px 3px var(--color-grey-4);
+  }
+  html[dark] .withdrawal {
+    border-left: 9px solid var(--color-grey-50);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

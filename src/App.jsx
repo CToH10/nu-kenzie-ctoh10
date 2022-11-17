@@ -23,7 +23,6 @@ function App() {
     setTransactionsList(
       transactionsList.filter((elem) => elem.id !== transaction)
     );
-    console.log(transactionsList);
   }
 
   return (

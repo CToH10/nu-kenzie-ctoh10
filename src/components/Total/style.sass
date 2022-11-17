@@ -28,3 +28,13 @@
 @media (prefers-color-scheme: dark)
     .displayTotal
         border: 1px solid var(--color-grey-4)
+
+    html[light]
+        .displayTotal
+            border: 1px solid var(--color-grey-2)
+
+@media (prefers-color-scheme: light)
+
+    html[dark]
+        .displayTotal
+            border: 1px solid var(--color-grey-4)
