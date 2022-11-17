@@ -1,0 +1,27 @@
+.displayTotal {
+  width: 90%;
+  margin: 2vh auto 0;
+  border: 1px solid var(--color-grey-2);
+  border-radius: 4px;
+  padding: 2vh 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.displayTotal .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.displayTotal .text h3 {
+  font-weight: var(--font-weight-2);
+}
+.displayTotal .text p {
+  font-weight: var(--font-weight-4);
+}
+.displayTotal .total p {
+  font-weight: var(--font-weight-2);
+  color: var(--color-primary);
+}
+
+/*# sourceMappingURL=style.css.map */
