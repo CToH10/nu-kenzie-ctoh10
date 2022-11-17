@@ -31,14 +31,16 @@ function App() {
         <>
           <StaticHeader action={goToPage} />
           <MainPage>
-            <section className="container">
-              <Form action={newTrans} list={transactionsList} />
-            </section>
+            <section className="formTotal">
+              <section className="container">
+                <Form action={newTrans} list={transactionsList} />
+              </section>
 
-            <section className="container">
-              {transactionsList.length !== 0 && (
-                <Total balance={[...transactionsList]} />
-              )}
+              <section className="container">
+                {transactionsList.length !== 0 && (
+                  <Total balance={[...transactionsList]} />
+                )}
+              </section>
             </section>
 
             <List list={transactionsList} action={deleteTransaction} />

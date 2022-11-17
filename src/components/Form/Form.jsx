@@ -53,6 +53,7 @@ export function Form({ action, list }) {
           placeholder="Digite aqui sua descrição"
           action={handleChange}
         />
+        <small>Ex. Compra de roupas</small>
       </section>
       <section className="values">
         <section className="sum">
