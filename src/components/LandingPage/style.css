@@ -101,5 +101,25 @@
     background-position: 90% 45%;
   }
 }
+@media (min-width: 1000px) and (prefers-color-scheme: light) {
+  .pageID .pageText h1 {
+    color: var(--color-grey-4);
+  }
+  .pageID .pageText p {
+    color: var(--color-grey-4);
+  }
+  .pageID .pageText small {
+    color: var(--color-grey-4);
+  }
+  html[dark] .pageID .pageText h1 {
+    color: var(--color-grey-2);
+  }
+  html[dark] .pageID .pageText p {
+    color: var(--color-grey-2);
+  }
+  html[dark] .pageID .pageText small {
+    color: var(--color-grey-2);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

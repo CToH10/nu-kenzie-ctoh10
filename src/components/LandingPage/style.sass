@@ -101,3 +101,27 @@
 
     .pageImg
         background-position: 90% 45%
+
+    @media (prefers-color-scheme: light)
+        .pageID
+            .pageText
+                h1
+                    color: var(--color-grey-4)
+
+                p
+                    color: var(--color-grey-4)
+
+                small
+                    color: var(--color-grey-4)
+
+        html[dark]
+            .pageID
+                .pageText
+                    h1
+                        color: var(--color-grey-2)
+
+                    p
+                        color: var(--color-grey-2)
+
+                    small
+                        color: var(--color-grey-2)
