@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "../Button/Button";
 import { Transaction } from "../Card/Card";
+import "./style.css";
 
 export function List({ list, action }) {
   let actualList = list;
@@ -26,9 +27,9 @@ export function List({ list, action }) {
   }
 
   return (
-    <section>
+    <section className="transactionsNav">
       <section className="listNav">
-        <h2>Transações</h2>
+        <h2>Resumo financeiro</h2>
 
         <section className="btnNav">
           <Button text="Todos" action={() => handleBtns("")} />

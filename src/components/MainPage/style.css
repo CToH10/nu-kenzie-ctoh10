@@ -1,0 +1,15 @@
+main {
+  position: relative;
+  top: 15vh;
+  height: fit-content;
+  padding-bottom: 3vh;
+}
+
+@media (min-width: 631px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,22 @@
 form
     display: flex
     flex-direction: column
+    gap: 3vh
+    width: 90%
+    margin: 0 auto
+    border: 1px solid var(--color-grey-2)
+    border-radius: 4px
+    padding: 2vh 1vw
 
     label
         font-weight: var(--font-weight-4)
+        align-self: flex-start
+
+
+    .values 
+        display: flex
+        flex-direction: column
+        gap: 2vh
     
     .descIpt, .sum, .kindOf
         display: flex
@@ -12,8 +25,23 @@ form
     .values
         display: flex
 
-    #totalSum
+    .descIpt, .sum, .kindOf
+        display: flex
+        flex-direction: column
+        gap: 1vh
+
+    #transactionValue
         background-image: url("../../assets/value.svg")
-        background-size: inherit
+        background-size: 20px
         background-position: right
         background-repeat: no-repeat
+    
+    #kindOfValue
+        background-color: var(--color-grey-1)
+        border: 2px solid var(--color-grey-1)
+        color: var(--color-grey-50)
+        padding: 1vh 1vw
+
+    button
+        width: 70%
+        align-self: center

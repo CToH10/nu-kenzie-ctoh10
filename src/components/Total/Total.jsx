@@ -1,3 +1,5 @@
+import "./style.css";
+
 export function Total({ balance }) {
   let treat = [...balance];
   let total = treat[0].transactionValue;
@@ -46,7 +48,7 @@ export function Total({ balance }) {
   }
 
   return (
-    <>
+    <section className="displayTotal">
       <section className="text">
         <h3>Valor total:</h3>
         <p>O valor se refere ao saldo</p>
@@ -54,6 +56,6 @@ export function Total({ balance }) {
       <section className="total">
         <p>R$ {total}</p>
       </section>
-    </>
+    </section>
   );
 }

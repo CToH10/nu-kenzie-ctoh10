@@ -1,0 +1,24 @@
+.transactionsNav {
+  width: 90%;
+  margin: 0 auto;
+}
+.transactionsNav .listNav {
+  margin-bottom: 2vh;
+}
+.transactionsNav .listNav h2 {
+  font-weight: var(--font-weight-2);
+}
+.transactionsNav .btnNav {
+  display: flex;
+  justify-content: space-between;
+}
+.transactionsNav .btnNav button {
+  padding: 2vh 3vw;
+}
+.transactionsNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/*# sourceMappingURL=style.css.map */
