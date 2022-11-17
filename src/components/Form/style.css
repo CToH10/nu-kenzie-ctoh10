@@ -13,17 +13,14 @@ form label {
   color: var(--color-grey-4);
   align-self: flex-start;
 }
+form small {
+  align-self: flex-start;
+  color: var(--color-grey-50);
+}
 form .values {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-}
-form .descIpt, form .sum, form .kindOf {
-  display: flex;
-  flex-direction: column;
-}
-form .values {
-  display: flex;
 }
 form .descIpt, form .sum, form .kindOf {
   display: flex;
@@ -39,14 +36,37 @@ form #transactionValue {
 form #kindOfValue {
   background-color: var(--color-grey-1);
   border: 2px solid var(--color-grey-1);
+  border-radius: 8px;
   color: var(--color-grey-50);
   padding: 1vh 1vw;
+}
+form #kindOfValue option {
+  color: var(--color-grey-3);
 }
 form button {
   width: 70%;
   align-self: center;
 }
 
+@media (min-width: 631px) {
+  form {
+    padding: 3vh 1vw;
+  }
+  form .values {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  form .values .sum, form .values .kindOf {
+    width: 45%;
+  }
+  form small {
+    align-self: flex-start;
+  }
+  form button {
+    width: 100%;
+    padding: 1.5vh 0;
+  }
+}
 @media (prefers-color-scheme: dark) {
   form {
     border: 1px solid var(--color-grey-4);

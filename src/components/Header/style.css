@@ -45,7 +45,10 @@ h1 span {
 }
 
 @media (min-width: 631px) {
-  header button + button {
+  header {
+    gap: 27vw;
+  }
+  header .interact button + button {
     padding: 1vh 1vw;
   }
 }

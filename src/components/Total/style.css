@@ -26,6 +26,16 @@
   color: var(--color-primary);
 }
 
+@media (min-width: 631px) {
+  .displayTotal {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3vh 1vw;
+  }
+  .displayTotal h3 {
+    align-self: flex-start;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .displayTotal {
     border: 1px solid var(--color-grey-4);

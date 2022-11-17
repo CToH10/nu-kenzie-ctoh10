@@ -8,6 +8,7 @@
 .transactionsNav .listNav h2 {
   font-weight: var(--font-weight-2);
   color: var(--color-grey-4);
+  padding: 2vh 0;
 }
 .transactionsNav .btnNav {
   display: flex;
@@ -20,6 +21,29 @@
   display: flex;
   flex-direction: column;
   gap: 2vh;
+}
+
+@media (min-width: 631px) {
+  .transactionsNav .listNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .transactionsNav .listNav h2 {
+    align-self: flex-start;
+    height: fit-content;
+    padding: 0;
+  }
+  .transactionsNav .listNav .btnNav {
+    gap: 1vw;
+    align-content: center;
+  }
+  .transactionsNav .listNav button {
+    padding: 1.5vh 1vw;
+  }
+  .transactionsNav ul {
+    gap: 4vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
