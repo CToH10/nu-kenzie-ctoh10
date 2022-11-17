@@ -12,7 +12,6 @@ export function List({ list, action }) {
 
   const [depTrue, setDepTrue] = useState(false);
   const [withTrue, setWithTrue] = useState(false);
-  //fazer state com active, mudar state, muda active
   const [active, setActive] = useState("Todos");
 
   function handleBtns(btn) {
@@ -52,7 +51,12 @@ export function List({ list, action }) {
           <Button text="Saídas" action={() => handleBtns("withdrawal")} />
         </section>
       </section>
-
+      {/* <ul>
+        <h2>Você não possui lançamentos</h2>
+      </ul> */}
+      {actualList.length === 0 && (
+        <h2 className="noTransactions">Você não possui lançamentos</h2>
+      )}
       {!depTrue && !withTrue && (
         <ul>
           {actualList.map((elem, index) => Transaction(elem, index, action))}

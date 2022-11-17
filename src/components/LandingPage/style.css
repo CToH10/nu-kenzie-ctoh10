@@ -1,7 +1,7 @@
 .pageID {
   position: fixed;
   z-index: 2;
-  top: 50%;
+  top: 47%;
   left: 50%;
   width: 300px;
   transform: translate(-50%, -50%);
@@ -16,6 +16,7 @@
 }
 .pageID .pageText h1 {
   font-weight: var(--font-weight-1);
+  font-size: var(--font-size-2);
   color: var(--color-grey-4);
 }
 .pageID .pageText h1 span {
@@ -23,10 +24,12 @@
 }
 .pageID .pageText p {
   font-weight: calc(var(--font-weight-4) * 2);
+  font-size: var(--font-size-1);
   color: var(--color-grey-4);
 }
 .pageID .pageText small {
   font-weight: var(--font-weight-4);
+  font-size: var(--font-size-3);
   color: var(--color-grey-4);
 }
 .pageID button {
@@ -82,12 +85,17 @@
   }
   .pageID .pageText h1 {
     color: var(--color-white);
+    align-self: flex-start;
   }
   .pageID .pageText p {
     color: var(--color-white);
   }
   .pageID .pageText small {
     color: var(--color-white);
+  }
+  .pageID .pageDesc {
+    width: 450px;
+    text-align: start;
   }
   .pageImg {
     background-position: 90% 45%;

@@ -1,7 +1,7 @@
 .pageID
     position: fixed
     z-index: 2
-    top: 50%
+    top: 47%
     left: 50%
     width: 300px
     transform: translate(-50%, -50%)
@@ -15,16 +15,19 @@
         gap: 8vh
         h1
             font-weight: var(--font-weight-1)
+            font-size: var(--font-size-2)
             color: var(--color-grey-4)
             span
                 color: var(--color-primary)
 
         p
             font-weight: calc(var(--font-weight-4) * 2)
+            font-size: var(--font-size-1)
             color: var(--color-grey-4)
 
         small
             font-weight: var(--font-weight-4)
+            font-size: var(--font-size-3)
             color: var(--color-grey-4)
 
     button
@@ -84,12 +87,17 @@
         .pageText
             h1
                 color: var(--color-white)
+                align-self: flex-start
 
             p
                 color: var(--color-white)
 
             small
                 color: var(--color-white)
+
+        .pageDesc
+            width: 450px
+            text-align: start
 
     .pageImg
         background-position: 90% 45%

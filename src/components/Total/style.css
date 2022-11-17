@@ -15,14 +15,17 @@
 }
 .displayTotal .text h3 {
   font-weight: var(--font-weight-2);
+  font-size: var(--font-size-3);
   color: var(--color-grey-4);
 }
 .displayTotal .text p {
   font-weight: var(--font-weight-4);
+  font-size: var(--font-size-5);
   color: var(--color-grey-4);
 }
 .displayTotal .total p {
   font-weight: var(--font-weight-2);
+  font-size: var(--font-size-3);
   color: var(--color-primary);
 }
 
