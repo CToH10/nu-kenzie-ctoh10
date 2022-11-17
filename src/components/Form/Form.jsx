@@ -61,14 +61,14 @@ export function Form({ action, list }) {
           <Inputs id="transactionValue" type="number" action={handleChange} />
         </section>
         <section className="kindOf">
-          <label htmlFor="">Tipo de transação</label>
+          <label htmlFor="">Tipo de valor</label>
           <select
             name="kindValue"
             id="kindOfValue"
             onChange={handleChange}
             required
           >
-            <option value="">Tipo de de transação</option>
+            <option value="">Tipo de valor</option>
             <option value="deposit">Entrada</option>
             <option value="withdrawal">Saída</option>
           </select>

@@ -7,6 +7,7 @@
 
         h2
             font-weight: var(--font-weight-2)
+            font-size: var(--font-size-3)
             color: var(--color-grey-4)
             padding: 2vh 0
 
@@ -15,7 +16,24 @@
         justify-content: space-between
 
         button
+            background-color: var(--color-grey-2)
+            border: 1px solid var(--color-grey-2)
+            color: var(--color-grey-3)
             padding: 2vh 3vw
+
+        .active
+            background-color: var(--color-primary)
+            border: 1px solid var(--color-primary)
+            color: var(--color-grey-1)
+
+        .active:hover
+            background-color: var(--color-primary-2)
+            border: 1px solid var(--color-primary-2)
+
+    .noTransactions
+        font-weight: var(--font-weight-2)
+        font-size: calc(var(--font-size-2) * 1.25)
+        color: var(--color-grey-4)
 
     ul
         display: flex
@@ -24,22 +42,98 @@
 
 @media (min-width: 631px)
     .transactionsNav
+        margin-top: 4vh
         .listNav
             display: flex
             justify-content: space-between
             align-items: center
 
             h2
-                align-self: flex-start
                 height: fit-content
                 padding: 0
 
-            .btnNav
-                gap: 1vw
-                align-content: center
+        .btnNav
+            gap: 1vw
+            align-content: center
 
             button
                 padding: 1.5vh 1vw
 
         ul
             gap: 4vh
+
+@media (min-width: 895px)
+    .transactionsNav
+        margin-top: 0
+        .listNav
+            h2
+                align-self: flex-start
+
+@media (prefers-color-scheme: dark)
+    .transactionsNav
+
+        .listNav
+            button
+                background-color: var(--color-grey-4)
+                border: 1px solid var(--color-grey-4)
+                color: var(--color-grey-2)
+
+            button:hover
+                background-color: var(--color-grey-3)
+                border: 1px solid var(--color-grey-3)
+                color: var(--color-grey-1)
+
+            .active
+                background-color: var(--color-primary)
+                border: 1px solid var(--color-primary)
+                color: var(--color-grey-1)
+
+            .active:hover
+                background-color: var(--color-primary-2)
+                border: 1px solid var(--color-primary-2)
+
+    html[light]
+        .transactionsNav
+            .listNav
+                button
+                    background-color: var(--color-grey-2)
+                    border: 1px solid var(--color-grey-2)
+                    color: var(--color-grey-3)
+
+                button:hover
+                    background-color: var(--color-grey-4)
+                    border: 1px solid var(--color-grey-4)
+                    color: var(--color-grey-1)
+
+                .active
+                    background-color: var(--color-primary)
+                    border: 1px solid var(--color-primary)
+                    color: var(--color-grey-1)
+
+                .active:hover
+                    background-color: var(--color-primary-2)
+                    border: 1px solid var(--color-primary-2)
+
+@media (prefers-color-scheme: light)
+    html[dark]
+        .transactionsNav
+            .listNav
+                button
+                    background-color: var(--color-grey-4)
+                    border: 1px solid var(--color-grey-4)
+                    color: var(--color-grey-2)
+                    padding: 1.5vh 1vw
+
+                button:hover
+                    background-color: var(--color-grey-3)
+                    border: 1px solid var(--color-grey-3)
+                    color: var(--color-grey-1)
+
+                .active
+                    background-color: var(--color-primary)
+                    border: 1px solid var(--color-primary)
+                    color: var(--color-grey-1)
+
+                .active:hover
+                    background-color: var(--color-primary-2)
+                    border: 1px solid var(--color-primary-2)

@@ -12,19 +12,33 @@ export function List({ list, action }) {
 
   const [depTrue, setDepTrue] = useState(false);
   const [withTrue, setWithTrue] = useState(false);
+  const [active, setActive] = useState("Todos");
 
   function handleBtns(btn) {
     if (btn === "deposit") {
       setDepTrue(true);
       setWithTrue(false);
+      setActive("Entradas");
     } else if (btn === "withdrawal") {
       setWithTrue(true);
       setDepTrue(false);
+      setActive("Saídas");
     } else {
       setDepTrue(false);
       setWithTrue(false);
+      setActive("Todos");
     }
   }
+
+  let navButtons = document.querySelectorAll(".btnNav button");
+
+  navButtons.forEach((navButton) => {
+    if (navButton.innerText === active) {
+      navButton.className = "active";
+    } else if (navButton.innerText !== active) {
+      navButton.className = "";
+    }
+  });
 
   return (
     <section className="transactionsNav">
@@ -33,11 +47,13 @@ export function List({ list, action }) {
 
         <section className="btnNav">
           <Button text="Todos" action={() => handleBtns("")} />
-          <Button text="Entradas" action={() => handleBtns("deposit")} />
+          <Button text="Entradas" action={(event) => handleBtns("deposit")} />
           <Button text="Saídas" action={() => handleBtns("withdrawal")} />
         </section>
       </section>
-
+      {actualList.length === 0 && (
+        <h2 className="noTransactions">Você não possui lançamentos</h2>
+      )}
       {!depTrue && !withTrue && (
         <ul>
           {actualList.map((elem, index) => Transaction(elem, index, action))}
@@ -45,13 +61,21 @@ export function List({ list, action }) {
       )}
       {depTrue && (
         <ul>
-          {depositList.map((elem, index) => Transaction(elem, index, action))}
+          {depositList.length > 0 ? (
+            depositList.map((elem, index) => Transaction(elem, index, action))
+          ) : (
+            <h2 className="noTransactions">Você não possui lançamentos</h2>
+          )}
         </ul>
       )}
       {withTrue && (
         <ul>
-          {withdrawalList.map((elem, index) =>
-            Transaction(elem, index, action)
+          {withdrawalList.length > 0 ? (
+            withdrawalList.map((elem, index) =>
+              Transaction(elem, index, action)
+            )
+          ) : (
+            <h2 className="noTransactions">Você não possui lançamentos</h2>
           )}
         </ul>
       )}

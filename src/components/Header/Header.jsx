@@ -2,12 +2,13 @@ import { Button } from "../Button/Button";
 import "./style.css";
 
 export function StaticHeader({ action }) {
-  function darkMode() {
-    // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    //   // console.log("light");
-    //   document.documentElement.setAttribute("light", false);
-    // }
+  if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+    document.documentElement.setAttribute("light", true);
+  } else {
+    document.documentElement.setAttribute("dark", true);
+  }
 
+  function darkMode() {
     if (document.documentElement.getAttribute("light") === "true") {
       document.documentElement.removeAttribute("light");
       document.documentElement.setAttribute("dark", true);

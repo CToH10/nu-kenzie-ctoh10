@@ -9,6 +9,13 @@
 .transCard h3, .transCard p {
   color: var(--color-grey-4);
 }
+.transCard h3 {
+  font-size: var(--font-size-3);
+}
+.transCard p {
+  font-weight: calc(var(--font-weight-4) * 0.8);
+  font-size: var(--font-size-5);
+}
 .transCard .descKind {
   display: flex;
   flex-direction: column;
@@ -20,6 +27,10 @@
   flex-direction: column;
   align-items: center;
   gap: 2vh;
+}
+.transCard .valueDelete p {
+  font-weight: calc(var(--font-weight-4) * 0.8);
+  font-size: var(--font-size-5);
 }
 .transCard .valueDelete button {
   border: none;
