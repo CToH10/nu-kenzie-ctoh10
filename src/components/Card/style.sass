@@ -6,6 +6,9 @@
     border-radius: 8px
     padding: 2vh 2vh
 
+    h3, p
+        color: var(--color-grey-4)
+
     .descKind
         display: flex
         flex-direction: column
@@ -30,7 +33,9 @@
             width: 8vw
             height: 4vh
 
-    
+        button:hover
+            background-image: url("../../assets/Property 1=Hover.svg")
+
 .withdrawal
     border-left: 9px solid var(--color-grey-2)
 
@@ -40,3 +45,46 @@
 .transCard:hover
     background-color: var(--color-white)
     box-shadow: 0px 0px 5px 3px var(--color-grey-2)
+
+@media (prefers-color-scheme: dark)
+    .transCard
+        background-color: var(--color-grey-3)
+
+        button:hover
+            background-image: url("../../assets/Property 1=DarkHover.svg")
+
+    .transCard:hover
+        background-color: var(--color-grey-2)
+        box-shadow: 0px 0px 5px 3px var(--color-grey-4)
+
+    .withdrawal
+        border-left: 9px solid var(--color-grey-50)
+
+    html[light]
+        .transCard
+            background-color: var(--color-grey-1)
+
+            button:hover
+                background-image: url("../../assets/Property 1=Hover.svg")
+
+        .transCard:hover
+            background-color: var(--color-white)
+            box-shadow: 0px 0px 5px 3px var(--color-grey-2)
+
+        .withdrawal
+            border-left: 9px solid var(--color-grey-2)
+
+@media (prefers-color-scheme: light)
+    html[dark]
+        .transCard
+            background-color: var(--color-grey-3)
+
+            button:hover
+                background-image: url("../../assets/Property 1=DarkHover.svg")
+
+        .transCard:hover
+            background-color: var(--color-grey-2)
+            box-shadow: 0px 0px 5px 3px var(--color-grey-4)
+
+        .withdrawal
+            border-left: 9px solid var(--color-grey-50)
