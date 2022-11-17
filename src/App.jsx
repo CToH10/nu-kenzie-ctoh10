@@ -3,6 +3,7 @@ import "./App.css";
 import { Button } from "./components/Button/Button";
 import { Form } from "./components/Form/Form";
 import { StaticHeader } from "./components/Header/Header";
+import { LandingPage } from "./components/LandingPage/LandingPage";
 import { List } from "./components/List/List";
 import { MainPage } from "./components/MainPage/MainPage";
 import { Total } from "./components/Total/Total";
@@ -47,7 +48,9 @@ function App() {
           </MainPage>
         </>
       ) : (
-        <Button text="Iniciar" action={goToPage} />
+        <LandingPage>
+          <Button text="Iniciar" action={goToPage} />
+        </LandingPage>
       )}
     </section>
   );

@@ -1,0 +1,97 @@
+.pageID {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+.pageID .pageText {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+}
+.pageID .pageText h1 {
+  font-weight: var(--font-weight-1);
+  color: var(--color-grey-4);
+}
+.pageID .pageText h1 span {
+  color: var(--color-primary);
+}
+.pageID .pageText p {
+  font-weight: calc(var(--font-weight-4) * 2);
+  color: var(--color-grey-4);
+}
+.pageID .pageText small {
+  font-weight: var(--font-weight-4);
+  color: var(--color-grey-4);
+}
+.pageID button {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pageImg {
+  position: absolute;
+  z-index: 1;
+  background-image: url("../../assets/illustration.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pageID .pageText h1 {
+    color: var(--color-grey-2);
+  }
+  .pageID .pageText p {
+    color: var(--color-grey-2);
+  }
+  .pageID .pageText small {
+    color: var(--color-grey-2);
+  }
+  html[light] .pageID .pageText h1 {
+    color: var(--color-grey-4);
+  }
+  html[light] .pageID .pageText p {
+    color: var(--color-grey-4);
+  }
+  html[light] .pageID .pageText small {
+    color: var(--color-grey-4);
+  }
+}
+@media (prefers-color-scheme: light) {
+  html[dark] .pageID .pageText h1 {
+    color: var(--color-grey-2);
+  }
+  html[dark] .pageID .pageText p {
+    color: var(--color-grey-2);
+  }
+  html[dark] .pageID .pageText small {
+    color: var(--color-grey-2);
+  }
+}
+@media (min-width: 1000px) {
+  .pageID {
+    left: 20%;
+  }
+  .pageID .pageText h1 {
+    color: var(--color-white);
+  }
+  .pageID .pageText p {
+    color: var(--color-white);
+  }
+  .pageID .pageText small {
+    color: var(--color-white);
+  }
+  .pageImg {
+    background-position: 90% 45%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
