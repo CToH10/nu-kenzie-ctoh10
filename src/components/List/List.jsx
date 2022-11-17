@@ -12,19 +12,34 @@ export function List({ list, action }) {
 
   const [depTrue, setDepTrue] = useState(false);
   const [withTrue, setWithTrue] = useState(false);
+  //fazer state com active, mudar state, muda active
+  const [active, setActive] = useState("Todos");
 
   function handleBtns(btn) {
     if (btn === "deposit") {
       setDepTrue(true);
       setWithTrue(false);
+      setActive("Entradas");
     } else if (btn === "withdrawal") {
       setWithTrue(true);
       setDepTrue(false);
+      setActive("Saídas");
     } else {
       setDepTrue(false);
       setWithTrue(false);
+      setActive("Todos");
     }
   }
+
+  let navButtons = document.querySelectorAll(".btnNav button");
+
+  navButtons.forEach((navButton) => {
+    if (navButton.innerText === active) {
+      navButton.className = "active";
+    } else if (navButton.innerText !== active) {
+      navButton.className = "";
+    }
+  });
 
   return (
     <section className="transactionsNav">
@@ -33,7 +48,7 @@ export function List({ list, action }) {
 
         <section className="btnNav">
           <Button text="Todos" action={() => handleBtns("")} />
-          <Button text="Entradas" action={() => handleBtns("deposit")} />
+          <Button text="Entradas" action={(event) => handleBtns("deposit")} />
           <Button text="Saídas" action={() => handleBtns("withdrawal")} />
         </section>
       </section>

@@ -15,7 +15,19 @@
   justify-content: space-between;
 }
 .transactionsNav .btnNav button {
+  background-color: var(--color-grey-2);
+  border: 1px solid var(--color-grey-2);
+  color: var(--color-grey-3);
   padding: 2vh 3vw;
+}
+.transactionsNav .btnNav .active {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-grey-1);
+}
+.transactionsNav .btnNav .active:hover {
+  background-color: var(--color-primary-2);
+  border: 1px solid var(--color-primary-2);
 }
 .transactionsNav ul {
   display: flex;
@@ -39,10 +51,59 @@
     align-content: center;
   }
   .transactionsNav .listNav button {
+    background-color: var(--color-grey-4);
+    border: 1px solid var(--color-grey-4);
+    color: var(--color-grey-2);
     padding: 1.5vh 1vw;
+  }
+  .transactionsNav .listNav button:hover {
+    background-color: var(--color-grey-3);
+    border: 1px solid var(--color-grey-3);
+    color: var(--color-grey-1);
   }
   .transactionsNav ul {
     gap: 4vh;
+  }
+  html[light] .transactionsNav .listNav button {
+    background-color: var(--color-grey-2);
+    border: 1px solid var(--color-grey-2);
+    color: var(--color-grey-3);
+  }
+  html[light] .transactionsNav .listNav button:hover {
+    background-color: var(--color-grey-4);
+    border: 1px solid var(--color-grey-4);
+    color: var(--color-grey-1);
+  }
+  html[light] .transactionsNav .listNav .active {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-grey-1);
+  }
+  html[light] .transactionsNav .listNav .active:hover {
+    background-color: var(--color-primary-2);
+    border: 1px solid var(--color-primary-2);
+  }
+}
+@media (prefers-color-scheme: light) {
+  html[dark] .transactionsNav .listNav button {
+    background-color: var(--color-grey-4);
+    border: 1px solid var(--color-grey-4);
+    color: var(--color-grey-2);
+    padding: 1.5vh 1vw;
+  }
+  html[dark] .transactionsNav .listNav button:hover {
+    background-color: var(--color-grey-3);
+    border: 1px solid var(--color-grey-3);
+    color: var(--color-grey-1);
+  }
+  html[dark] .transactionsNav .listNav .active {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-grey-1);
+  }
+  html[dark] .transactionsNav .listNav .active:hover {
+    background-color: var(--color-primary-2);
+    border: 1px solid var(--color-primary-2);
   }
 }
 
