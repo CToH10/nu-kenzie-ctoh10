@@ -14,21 +14,30 @@ header
         color: var(--color-grey-3)
         padding: 1vh 4vw
 
-    button:hover 
+    button:hover
         background-color: var(--color-grey-4)
         border: 1px solid var(--color-grey-4)
-        color: var(--color-grey-1) 
-        
-    
+        color: var(--color-grey-1)
+
 h1
     font-weight: var(--font-weight-1)
+    color: var(--color-grey-4)
     span
         color: var(--color-primary)
 
-
-
-
-@media (min-width: 631px) 
+@media (min-width: 631px)
     header
         button
             padding: 1vh 1vw
+
+@media (prefers-color-scheme: dark)
+header
+    button
+        background-color: var(--color-grey-4)
+        border: 1px solid var(--color-grey-4)
+        color: var(--color-grey-2)
+
+    button:hover
+        background-color: var(--color-grey-3)
+        border: 1px solid var(--color-grey-3)
+        color: var(--color-grey-1)

@@ -15,3 +15,17 @@
   --font-weight-3: 600;
   --font-weight-4: 500;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-grey-2);
+  }
+  :root {
+    --color-grey-1: #f8f9fa;
+    --color-grey-2: #212529;
+    --color-grey-3: #343a40;
+    --color-grey-4: #e9ecef;
+    --color-grey-50: #868e96;
+    --color-white: #ffffff;
+  }
+}
