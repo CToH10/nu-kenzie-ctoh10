@@ -14,8 +14,6 @@ export function List({ list, action }) {
   const [withTrue, setWithTrue] = useState(false);
   const [active, setActive] = useState("Todos");
 
-  console.log(active);
-
   function handleBtns(btn) {
     if (btn === "deposit") {
       setDepTrue(true);
@@ -35,9 +33,8 @@ export function List({ list, action }) {
   return (
     <section className="transactionsNav">
       <section className="listNav">
-        <ul>
-          <h2>Resumo financeiro</h2>
-        </ul>
+         <h2>Resumo financeiro</h2>
+        
 
         <section className="btnNav">
           <Button
