@@ -33,9 +33,8 @@ export function List({ list, action }) {
   return (
     <section className="transactionsNav">
       <section className="listNav">
-        <ul>
-          <h2>Resumo financeiro</h2>
-        </ul>
+         <h2>Resumo financeiro</h2>
+        
 
         <section className="btnNav">
           <Button
