@@ -14,8 +14,6 @@ export function List({ list, action }) {
   const [withTrue, setWithTrue] = useState(false);
   const [active, setActive] = useState("Todos");
 
-  console.log(active);
-
   function handleBtns(btn) {
     if (btn === "deposit") {
       setDepTrue(true);
