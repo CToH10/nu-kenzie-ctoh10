@@ -14,6 +14,8 @@ export function List({ list, action }) {
   const [withTrue, setWithTrue] = useState(false);
   const [active, setActive] = useState("Todos");
 
+  console.log(active);
+
   function handleBtns(btn) {
     if (btn === "deposit") {
       setDepTrue(true);
@@ -30,28 +32,32 @@ export function List({ list, action }) {
     }
   }
 
-  let navButtons = document.querySelectorAll(".btnNav button");
-
-  navButtons.forEach((navButton) => {
-    if (navButton.innerText === active) {
-      navButton.className = "active";
-    } else if (navButton.innerText !== active) {
-      navButton.className = "";
-    }
-  });
-
   return (
     <section className="transactionsNav">
       <section className="listNav">
-        <h2>Resumo financeiro</h2>
+        <ul>
+          <h2>Resumo financeiro</h2>
+        </ul>
 
         <section className="btnNav">
-          <Button text="Todos" action={() => handleBtns("")} />
-          <Button text="Entradas" action={(event) => handleBtns("deposit")} />
-          <Button text="Saídas" action={() => handleBtns("withdrawal")} />
+          <Button
+            text="Todos"
+            action={() => handleBtns("")}
+            className={active === "Todos" ? "active" : ""}
+          />
+          <Button
+            text="Entradas"
+            action={(event) => handleBtns("deposit")}
+            className={active === "Entradas" ? "active" : ""}
+          />
+          <Button
+            text="Saídas"
+            action={() => handleBtns("withdrawal")}
+            className={active === "Saídas" ? "active" : ""}
+          />
         </section>
       </section>
-      {actualList.length === 0 && (
+      {actualList.length === 0 && !depTrue && !withTrue && (
         <h2 className="noTransactions">Você não possui lançamentos</h2>
       )}
       {!depTrue && !withTrue && (
@@ -60,24 +66,30 @@ export function List({ list, action }) {
         </ul>
       )}
       {depTrue && (
-        <ul>
+        <>
           {depositList.length > 0 ? (
-            depositList.map((elem, index) => Transaction(elem, index, action))
+            <ul>
+              {depositList.map((elem, index) =>
+                Transaction(elem, index, action)
+              )}
+            </ul>
           ) : (
             <h2 className="noTransactions">Você não possui lançamentos</h2>
           )}
-        </ul>
+        </>
       )}
       {withTrue && (
-        <ul>
+        <>
           {withdrawalList.length > 0 ? (
-            withdrawalList.map((elem, index) =>
-              Transaction(elem, index, action)
-            )
+            <ul>
+              {withdrawalList.map((elem, index) =>
+                Transaction(elem, index, action)
+              )}
+            </ul>
           ) : (
             <h2 className="noTransactions">Você não possui lançamentos</h2>
           )}
-        </ul>
+        </>
       )}
     </section>
   );
